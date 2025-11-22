@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui"{
+ themes: light --default, dark;
+};
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #caeb66;
+  --color-secondary: #03373d;
+}
+
+body{
+  
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #f5f5f5;
+}
+
+.cardA {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cardA::before,
+.cardA::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 12px;
+  background: #caeb66;
+  border-radius: 4px;
+
+  offset-path: inset(0 round 20px);
+
+  animation: chase 6s linear infinite;
+}
+
+.cardA::after {
+  animation-delay: -3s;  
+}
+
+@keyframes chase {
+  0%   { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+.cardA > * {
+  position: relative;
+  z-index: 10;
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
