@@ -22,9 +22,9 @@ const Coverage = () => {
     }
   }
   return (
-    <div className="p-20 bg-white rounded-4xl space-y-12 mb-20">
-      <h2 className="text-5xl font-bold">We are available in 64 districts</h2>
-      <div>
+    <div className="p-5 md:p-20  bg-white rounded-2xl space-y-8 md:space-y-12 mb-10 md:mb-20">
+      <h2 className="text-3xl md:text-5xl font-bold">We are available in 64 districts</h2>
+      <div className="relative">
         <form onSubmit={handleSearch}>
             <label className="input border-r-0">
           <svg
@@ -46,12 +46,12 @@ const Coverage = () => {
           <input name="location" type="search" className="grow" placeholder="Search" />
 
         </label>
-        <button className="btn btn-primary text-secondary font-semibold text-xl border-l-0"><BiSearch/> Search</button>
+        <button className="btn btn-primary text-secondary font-semibold md:text-xl border-l-0 absolute left-60 md:left-76"><BiSearch/> Search</button>
         </form>
       </div>
 
       <hr className="opacity-20"/>
-      <p className="text-3xl font-semibold text-secondary">
+      <p className="text-2xl md:text-3xl font-semibold text-secondary">
         We deliver almost all over Bangladesh
       </p>
       <div className="w-full h-[600px] rounded-2xl overflow-hidden">

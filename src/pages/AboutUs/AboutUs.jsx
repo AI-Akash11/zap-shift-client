@@ -174,7 +174,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="mb-20 bg-white rounded-3xl px-24 py-20 shadow-sm border border-gray-200">
+    <div className="mb-20 bg-white rounded-3xl px-5 md:px-24 py-8 md:py-20 shadow-sm border mx-5 md:mx-10 border-gray-200">
       {/* Header */}
       <h2 className="text-4xl font-bold text-secondary mb-3">About Us</h2>
       <p className="text-gray-500 mb-8 w-[90%] md:w-[70%]">

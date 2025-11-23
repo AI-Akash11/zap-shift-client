@@ -6,7 +6,7 @@ import rightBg from '../../../assets/location-merchant.png'
 const Merchant = () => {
   return (
     <div className="w-[90%] mx-auto rounded-2xl bg-secondary my-20 relative p-20 text-white">
-        <img src={topBg} className="absolute top-0 z-10 h-[35%]"/>
+        <img src={topBg} className="absolute top-0 z-10 h-[35%] max-w-[80%]"/>
         <img src={rightBg} className="absolute right-5 lg:bottom-5 md:w-[40%] md:bottom-30 hidden md:block z-10 lg:w-[50%]"/>
       <div className="md:w-[60%] z-20">
         <h3 className="text-3xl font-bold mb-5">Merchant and Customer Satisfaction is Our First Priority</h3>
