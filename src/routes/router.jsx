@@ -13,6 +13,9 @@ import Services from "../pages/Services/Services";
 import Pricing from "../pages/Pricing/Pricing";
 import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
+import SendParcel from "../pages/SendParcel/SendParcel";
+import DashboardLayout from "../layouts/DashboardLayout";
+import MyParcels from "../pages/Dashboard/MyParcels/MyParcels";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +30,11 @@ export const router = createBrowserRouter([
           path: '/coverage',
           element: <Coverage></Coverage>,
           loader: ()=> fetch('/warehouses.json').then(res=>res.json())
+        },
+        {
+          path: '/send-parcel',
+          element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>,
+           loader: ()=> fetch('/warehouses.json').then(res=>res.json())
         },
         {
           path: '/about-us',
@@ -69,6 +77,16 @@ export const router = createBrowserRouter([
       {
         path: '/forget',
         Component: Forget
+      }
+    ]
+  },
+  {
+    path: '/dashboard',
+    element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+    children:[
+      {
+        path: 'my-parcels',
+        Component: MyParcels
       }
     ]
   }

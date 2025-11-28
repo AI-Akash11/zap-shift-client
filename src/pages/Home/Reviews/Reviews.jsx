@@ -6,7 +6,7 @@ import image1 from "../../../assets/customer-top.png";
 
 const Reviews = ({ reviewsPromise }) => {
   const reviews = use(reviewsPromise);
-  console.log(reviews);
+  // console.log(reviews);
   return (
     <div className="my-20 w-11/12 mx-auto">
       <div className="text-center flex flex-col justify-center items-center gap-2 w-4/5 md:w-3/5 mx-auto text-secondary mb-15">

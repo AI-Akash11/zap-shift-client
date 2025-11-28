@@ -58,6 +58,8 @@ body{
 }
 
 a.active{
-  background-color: #03373d;
-  color: white;
+  background-color: #caeb66;
+  color: #03373d;
+  border-radius: 40px;
+  font-weight: 800;
 }

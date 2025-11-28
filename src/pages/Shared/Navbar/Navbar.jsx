@@ -21,24 +21,35 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/services">Services</NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink to="/coverage">Coverage</NavLink>
       </li>
       <li>
+        <NavLink to="/send-parcel">Send Parcel</NavLink>
+      </li>
+      <li>
         <NavLink to="/about-us">About Us</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/pricing">Pricing</NavLink>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <NavLink to="/blog">Blog</NavLink>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <NavLink to="/contact">Contact</NavLink>
-      </li>
+      </li> */}
+
+      {
+        user && <>
+        <li>
+          <NavLink to={'/dashboard/my-parcels'}>My Parcels</NavLink>
+        </li>
+        </>
+      }
     </>
   );
   return (
@@ -70,9 +81,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="">
+          <span>
             <Logo></Logo>
-          </a>
+          </span>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
